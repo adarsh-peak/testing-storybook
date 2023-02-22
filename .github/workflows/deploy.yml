@@ -16,4 +16,4 @@ jobs:
       with:
         node-version: 16
         path: dist/storybook-static
-        build_command: npm run build-storybook
+        build_command: SET NODE_OPTIONS=--openssl-legacy-provider && npm run build-storybook
