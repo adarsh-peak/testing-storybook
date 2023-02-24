@@ -4,11 +4,13 @@ on:
   push:
     branches:
       - "master"
+      
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  job_id:
-    # Add "id-token" with the intended permissions.
-    permissions:
-      id-token: 'write'
   deploy:
     environment:
       name: github-pages
