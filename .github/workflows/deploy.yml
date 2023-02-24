@@ -5,6 +5,10 @@ on:
     branches:
       - "master"
 jobs:
+  job_id:
+    # Add "id-token" with the intended permissions.
+    permissions:
+      id-token: 'write'
   deploy:
     environment:
       name: github-pages
