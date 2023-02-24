@@ -13,6 +13,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm ci
+          npm audit fix --force
           SET NODE_OPTIONS=--openssl-legacy-provider && npm run build-storybook
 
       - name: Deploy
